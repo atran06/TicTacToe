@@ -6,6 +6,6 @@
     
     
     
-    <footer>Arthur</footer>
+    <h1>Arthur</h1>
   </body>
 </head>
