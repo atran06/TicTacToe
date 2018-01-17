@@ -6,6 +6,6 @@
     
     
     
-    </p>Arthur Angelo Parth</p>
+    <footer>Arthur</footer>
   </body>
 </head>
