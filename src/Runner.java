@@ -13,44 +13,44 @@ public class Runner {
 
 		Game.print();
 
-		while(true) {
-			
-			System.out.println("\nEnter a number for player " + player);
+		while (true) {
 
-			while (true) {
-				
-				if(Game.win()) {
-					break;
-				} else {
+			if (Game.win()) {
+				break;
+			} else {
+				System.out.println("\nEnter a number for player " + player);
+
+				while (true) {
+
 					ent = input.nextInt();
 					int ent2 = ent;
 					int row = 0;
-					
-					if(ent <= 3) {
+
+					if (ent <= 3) {
 						row = 0;
-					} else if(ent > 3 && ent <= 6) {
+					} else if (ent > 3 && ent <= 6) {
 						row = 1;
 						ent2 -= 3;
-					} else if(ent > 6 && ent <= 9) {
+					} else if (ent > 6 && ent <= 9) {
 						row = 2;
 						ent2 -= 6;
 					}
 					if (ent > 9 || ent <= 0) {
 						System.out.println("Invalid input try again");
-						
-					} else if(arr[row][ent2 - 1].equals("o") || arr[row][ent2 - 1].equals("x")) {
+
+					} else if (arr[row][ent2 - 1].equals("o") || arr[row][ent2 - 1].equals("x")) {
 						System.out.println("Spot taken");
-						
+
 					} else {
 						new Game(ent, player);
-						
+
 						if (player == 1) {
 							player++;
 						} else {
 							player--;
 						}
 						break;
-					}					
+					}
 				}
 			}
 		}

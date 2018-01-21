@@ -9,11 +9,29 @@ public class Game {
 		this.player = player;
 		
 		logic();
-		win();
 		print();
 	}
 	public static boolean win() {
-		 return false;
+		for(int i = 0; i < Runner.arr.length; i++) {
+			for(int x = 0; x < Runner.arr[0].length; x++) {
+				if(i == 0) {
+					if(x == 0) {
+						if(Runner.arr[i][x].equals("x")) {
+							if(Runner.arr[i][x + 1].equals("x") && Runner.arr[i][x + 2].equals("x")) {
+								System.out.println("Player 1 wins!");
+								return true;
+							}
+						} else if(Runner.arr[i][x].equals("o")) {
+							if(Runner.arr[i][x + 1].equals("o") && Runner.arr[i][x + 2].equals("o")) {
+								System.out.println("Player 2 wins!");
+								return true;
+							}
+						}
+					}
+				}
+			}
+		}
+		return false;
 	}
 	public void logic() {
 		int row = 0;
