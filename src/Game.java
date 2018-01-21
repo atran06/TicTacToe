@@ -20,9 +20,65 @@ public class Game {
 							if(Runner.arr[i][x + 1].equals("x") && Runner.arr[i][x + 2].equals("x")) {
 								System.out.println("Player 1 wins!");
 								return true;
+							} else if(Runner.arr[i + 1][x].equals("x") && Runner.arr[i + 2][x].equals("x")) {
+								System.out.println("Player 1 wins!");
+								return true;
+							} else if(Runner.arr[i + 1][x + 1].equals("x") && Runner.arr[i + 2][x + 2].equals("x")) {
+								System.out.println("Player 1 wins!");
+								return true;
 							}
 						} else if(Runner.arr[i][x].equals("o")) {
 							if(Runner.arr[i][x + 1].equals("o") && Runner.arr[i][x + 2].equals("o")) {
+								System.out.println("Player 2 wins!");
+								return true;
+							} else if(Runner.arr[i + 1][x].equals("o") && Runner.arr[i + 2][x].equals("o")) {
+								System.out.println("Player 2 wins!");
+								return true;
+							} else if(Runner.arr[i + 1][x + 1].equals("o") && Runner.arr[i + 2][x + 2].equals("o")) {
+								System.out.println("Player 2 wins!");
+								return true;
+							}
+						} 
+					} else if(x == 1) {
+						if(Runner.arr[i][x].equals("x")) {
+							if(Runner.arr[i + 1][x].equals("x") && Runner.arr[i + 2][x].equals("x")) {
+								System.out.println("Player 1 wins!");
+								return true;
+							}
+						} else if(Runner.arr[i][x].equals("o")) {
+							if(Runner.arr[i + 1][x].equals("o") && Runner.arr[i + 2][x].equals("o")) {
+								System.out.println("Player 2 wins!");
+								return true;
+							}
+						}
+					} else if(x == 2) {
+						if(Runner.arr[i][x].equals("x")) {
+							if(Runner.arr[i + 1][x - 1].equals("x") && Runner.arr[i + 2][x - 2].equals("x")) {
+								System.out.println("Player 1 wins!");
+								return true;
+							}
+						} else if(Runner.arr[i][x].equals("o")) {
+							if(Runner.arr[i + 1][x - 1].equals("o") && Runner.arr[i + 2][x - 2].equals("o")) {
+								System.out.println("Player 2 wins!");
+								return true;
+							}
+						}
+					}
+				} else if(i == 2) {
+					if(x == 2) {
+						if(Runner.arr[i][x].equals("x")) {
+							if(Runner.arr[i - 1][x].equals("x") && Runner.arr[i - 2][x].equals("x")) {
+								System.out.println("Player 1 wins!");
+								return true;
+							} else if(Runner.arr[i][x - 1].equals("x") && Runner.arr[i][x - 2].equals("x")) {
+								System.out.println("Player 1 wins!");
+								return true;
+							}
+						} else if(Runner.arr[i][x].equals("o")) {
+							if(Runner.arr[i - 1][x].equals("o") && Runner.arr[i - 2][x].equals("o")) {
+								System.out.println("Player 2 wins!");
+								return true;
+							} else if(Runner.arr[i][x - 1].equals("o") && Runner.arr[i][x - 2].equals("o")) {
 								System.out.println("Player 2 wins!");
 								return true;
 							}
