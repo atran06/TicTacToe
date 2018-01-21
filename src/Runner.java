@@ -6,6 +6,7 @@ public class Runner {
 			{ Integer.toString(4), Integer.toString(5), Integer.toString(6) },
 			{ Integer.toString(7), Integer.toString(8), Integer.toString(9) } };
 	private static int ent;
+	private static int turns = 0;
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
@@ -17,12 +18,21 @@ public class Runner {
 
 			if (Game.win()) {
 				break;
+				
+			} else if(turns == 9) {
+				System.out.println("It's a tie!");
+				break;
+				
 			} else {
 				System.out.println("\nEnter a number for player " + player);
 
 				while (true) {
 
-					ent = input.nextInt();
+					try {
+						ent = input.nextInt();
+					} catch(Exception e) {
+						input.next();
+					}
 					int ent2 = ent;
 					int row = 0;
 
@@ -53,6 +63,7 @@ public class Runner {
 					}
 				}
 			}
+			turns++;
 		}
 	}
 }
