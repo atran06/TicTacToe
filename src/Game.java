@@ -12,6 +12,14 @@ public class Game {
 		print();
 	}
 	public static boolean win() {
+		
+		/*
+		 * This method uses a double for loop to check every possible win scenario
+		 * then return true or false if someone wins or doesn't win
+		 * 
+		 * Not really the prettiest way to do this but it works :)
+		 */
+		
 		for(int i = 0; i < Runner.arr.length; i++) {
 			for(int x = 0; x < Runner.arr[0].length; x++) {
 				if(i == 0) {
@@ -89,9 +97,18 @@ public class Game {
 		}
 		return false;
 	}
+	
+	/*
+	 * This method just populates the array 
+	 */
 	public void logic() {
 		int row = 0;
 		String xo = "o";
+		
+		/*
+		 * All of this just makes populating easier by setting the 
+		 * row the number is on and sets a space of 1-3
+		 */
 		
 		if(ent <= 3) {
 			row = 0;
@@ -110,6 +127,12 @@ public class Game {
 		Runner.arr[row][ent - 1] = xo;
 		
 	}
+	
+	/*
+	 * This method uses a double for loop to print each row
+	 * then column
+	 */
+	
 	public static void print() {
 		int row = 0;
 		
