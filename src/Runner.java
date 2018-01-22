@@ -46,10 +46,12 @@ public class Runner {
 
 				while (true) {
 
-					try { //incase input isnt an int
+					try { //in case input isn't an int
 						ent = input.nextInt();
 					} catch(Exception e) {
 						input.next();
+						System.out.println("Not a valid input");
+						continue;
 					}
 					int ent2 = ent;
 					int row = 0;
