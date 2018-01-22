@@ -8,7 +8,7 @@ public class Game {
 		this.ent = ent;
 		this.player = player;
 		
-		logic();
+		populate();
 		print();
 	}
 	public static boolean win() {
@@ -101,7 +101,7 @@ public class Game {
 	/*
 	 * This method just populates the array 
 	 */
-	public void logic() {
+	public void populate() {
 		int row = 0;
 		String xo = "o";
 		
