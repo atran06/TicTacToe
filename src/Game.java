@@ -17,7 +17,7 @@ public class Game {
 		 * This method uses a double for loop to check every possible win scenario
 		 * then return true or false if someone wins or doesn't win
 		 * 
-		 * Not really the prettiest way to do this but it works :)
+		 * Not really the prettiest way to do this but it works :).
 		 */
 		
 		for(int i = 0; i < Runner.arr.length; i++) {
